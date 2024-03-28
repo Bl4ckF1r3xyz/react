@@ -4,22 +4,17 @@ import UslugiSection from "./components/UslugiSection"
 import TarifSection from "./components/TarifSection"
 import GlavName from "./components/GlavName"
 import LK from "./LK"
-import { Routes, Route, Link } from 'react-router-dom';
-
+import Otziv from "./components/Otziv"
+import MainPage from "./components/MainPage"
+import { Route,Routes } from "react-router-dom"
 export default  function App(){
   return(
-    <div>
-      <Header />
-    <main>
-      <GlavName />
-      <DataSection />
-      <UslugiSection />  
-      <TarifSection />
-      <Routes>
-      <Route path="./LK" element={<LK />}></Route>
+ <Routes>
+      <Route path="/" element={<MainPage/>}></Route>
+      <Route path="/lk" element={<LK />}></Route>
+      <Route path="/otziv" element={<Otziv />}></Route>
+      <Route path="/main" element={<MainPage />}></Route>
       </Routes>
-
-        </main>
-      </div>
+      
   )
 }

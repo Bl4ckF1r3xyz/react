@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom"
+
 export default function Header(){
     return(
       <header>
-        <h2>Харон</h2>
+        <Link to="/mainPage">Харон</Link>
         <h3>транспортная фирма</h3>
         <h2>Калькулятор</h2>
-        <h2>Отзыв</h2>
+        <Link to="/Otziv">Отзыв</Link>
         <h2>Связаться с нами</h2>
-        <a href="./LK">Личный кабинет</a>
+        <Link to="/lk">Личный кабинет</Link>
       </header>
     )
   }
