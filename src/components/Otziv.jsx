@@ -1,14 +1,41 @@
-import Header from "./Header"
+import Header from "./Header";
+import './Otziv.css'
+export default function LK() {
+  const reviews = [
+    {
+      author: 'Владимир Сорокин',
+      text: 'Водитель приехал вовремя. Грузчики поработали очень аккуратно и быстро. Всем советую эту компанию!'
+    },
+    {author: 'Владимир Сорокин',
+    text: 'Водитель приехал вовремя. Грузчики поработали очень аккуратно и быстро. Всем советую эту компанию!'
+  },
+  {
+    author: 'Владимир Сорокин',
+    text: 'Водитель приехал вовремя. Грузчики поработали очень аккуратно и быстро. Всем советую эту компанию!'
+},
+  {
+    author: 'Владимир Сорокин',
+    text: 'Водитель приехал вовремя. Грузчики поработали очень аккуратно и быстро. Всем советую эту компанию!'
+  },
+  { author: 'Владимир Сорокин',
+    text: 'Водитель приехал вовремя. Грузчики поработали очень аккуратно и быстро. Всем советую эту компанию!'
+}
+  ];
 
-export default  function LK(){
-    return(
-      <div>
-        <Header />
+  return (
+    <div className="LK">
+      <Header />
       <main>
-      <h1 className="centered">Отзывы о грузоперевозчиках</h1>
-      
-          </main>
+        <h1 className="centered">Отзывы о грузоперевозчиках</h1>
+        <div className="otziv-container">
+          {reviews.map((review, index) => (
+            <div key={index} className="review">
+              <h2>{review.author}</h2>
+              <p>{review.text}</p>
+            </div>
+          ))}
         </div>
-    )
-  }
-  
+      </main>
+    </div>
+  );
+}

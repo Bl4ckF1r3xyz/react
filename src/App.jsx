@@ -15,6 +15,6 @@ export default  function App(){
       <Route path="/otziv" element={<Otziv />}></Route>
       <Route path="/main" element={<MainPage />}></Route>
       </Routes>
-      
+
   )
 }

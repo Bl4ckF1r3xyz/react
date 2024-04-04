@@ -1,0 +1,35 @@
+.LK {
+    font-family: Arial, sans-serif;
+  }
+  
+  .centered {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .otziv-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .review {
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .review h2 {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  .review p {
+    font-size: 0.9em;
+  }
+  
