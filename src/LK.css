@@ -16,6 +16,7 @@
     background-color: #F6B91C;
     padding: 20px;
     width: 300px;
+    height: 100vmin
 }
 .user-profile {
     display: flex;

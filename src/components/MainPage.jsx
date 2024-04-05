@@ -5,9 +5,11 @@ import UslugiSection from './UslugiSection'
 import TarifSection from './TarifSection'
 import { useState } from "react"
 import Modal from "./Modal"
+import ModalKontact from "./ModalKontact"
+import "./Modal.css"
+import "./ModalKontact.css"
 
 function MainPage(){
-const [modalActive, setModalActive] = useState(true)
  const uslugi = [
   {usluga:'Перевозка'},
   {usluga:'Перевозка'},
@@ -35,7 +37,6 @@ const [modalActive, setModalActive] = useState(true)
 ))}
 
 
-
       
        
       <h3 className="centered">Наши тарифы</h3>
@@ -47,7 +48,6 @@ const [modalActive, setModalActive] = useState(true)
       <p>Еврофуры</p><TarifSection /> 
       <p>Еврофуры</p><TarifSection /> 
         </main>
-        <Modal acrive={modalActive} setActive={setModalActive} />
       </div>
         </>
     )

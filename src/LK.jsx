@@ -29,8 +29,8 @@ export default function LK() {
               </div>
             </div>
             <div className="menu">
-              <div className="menu-item">История перевозок</div>
-              <div className="menu-item active">Ближайшие перевозки</div>
+              <div className="menu-item active">История перевозок</div>
+              <div className="menu-item ">Ближайшие перевозки</div>
               <div className="menu-item">Настройки</div>
             </div>
           </aside>
