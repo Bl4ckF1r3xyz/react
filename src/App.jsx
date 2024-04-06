@@ -7,6 +7,10 @@ import LK from "./LK"
 import Otziv from "./components/Otziv"
 import MainPage from "./components/MainPage"
 import { Route,Routes } from "react-router-dom"
+import LKDop from "./LKDop"
+
+
+
 export default  function App(){
   return(
  <Routes>
@@ -14,6 +18,7 @@ export default  function App(){
       <Route path="/lk" element={<LK />}></Route>
       <Route path="/otziv" element={<Otziv />}></Route>
       <Route path="/main" element={<MainPage />}></Route>
+      <Route path="/LKDop" element={<LKDop />}></Route>
       </Routes>
   )
 }

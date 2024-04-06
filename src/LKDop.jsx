@@ -1,19 +1,8 @@
 import React from 'react';
 import Header from "./components/Header";
 import './LK.css';
-import { Link } from "react-router-dom";
 
 export default function LK() {
-  const userInfo = {
-    initials: 'А',
-    name: 'Александр',
-    company: 'пао центр инвест',
-    phone: '+79934482004'
-  };
-
-  const orders = [
-    { id: 'N1121', date: '12.03.2024', status: 'Выполнена' },
-  ];
 
   return (
     <><Header /><div className="lk-container-glav">
@@ -31,7 +20,7 @@ export default function LK() {
             </div>
             <div className="menu">
               <div className="menu-item active">История перевозок</div>
-              <div className="menu-item "><Link to="/LKDop">Ближайшие перевозки</Link></div>
+              <div className="menu-item ">Ближайшие перевозки</div>
               <div className="menu-item">Настройки</div>
             </div>
           </aside>

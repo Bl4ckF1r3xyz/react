@@ -4,7 +4,7 @@ export default function Section () {
           <h3 className="centered">
           Наши услуги
           </h3>
-          <h4>
+          <h4 className="centered">
           Автомобильные грузоперевозки по всей России в том числе и в труднодоступные районы
           </h4>
 
