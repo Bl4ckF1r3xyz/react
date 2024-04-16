@@ -8,6 +8,7 @@ import Otziv from "./components/Otziv"
 import MainPage from "./components/MainPage"
 import { Route,Routes } from "react-router-dom"
 import LKDop from "./LKDop"
+import LKN from "./LKN"
 
 
 
@@ -19,6 +20,7 @@ export default  function App(){
       <Route path="/otziv" element={<Otziv />}></Route>
       <Route path="/main" element={<MainPage />}></Route>
       <Route path="/LKDop" element={<LKDop />}></Route>
+      <Route path="/LKN" element={<LKN />}></Route>
       </Routes>
   )
 }

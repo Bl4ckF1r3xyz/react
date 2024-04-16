@@ -3,17 +3,13 @@ import Header from "./components/Header";
 import './LK.css';
 import { Link } from "react-router-dom";
 
-export default function LK() {
+export default function LKN() {
   const userInfo = {
     initials: 'А',
     name: 'Александр',
     company: 'пао центр инвест',
     phone: '+79934482004'
   };
-
-  const orders = [
-    { id: 'N1121', date: '12.03.2024', status: 'Выполнена' },
-  ];
 
   return (
     <><Header /><div className="lk-container-glav">
@@ -30,25 +26,13 @@ export default function LK() {
               </div>
             </div>
             <div className="menu">
-              <div className="menu-item active">История перевозок</div>
+            <div className="menu-item"> <Link to="/LK">История перевозок</Link></div>
               <div className="menu-item "> <Link to="/LKDop">Ближайшие перевозки</Link></div>
-              <div className="menu-item"><Link to="/LKN">Настройки</Link></div>
+              <div className="menu-item active">Настройки</div>
             </div>
           </aside>
           <main className="main-content">
-            <div className="date-filter">
-              <p>Период от</p><input type="date" />
-              <p>До</p><input type="date" />
-            </div>
-            <div className="orders">
-              {orders.map(order => (
-                <div className="order-item" key={order.id}>
-                  <span className="order-id">Заказ {order.id}</span>
-                  <span className="order-date">{order.date}</span>
-                  <span className={`order-status ${order.status.toLowerCase()}`}>{order.status}</span>
-                </div>
-              ))}
-            </div>
+            <h1>Идите нахуй бляди :/</h1>
           </main>
         </div>
       </div>
