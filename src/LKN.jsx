@@ -32,7 +32,6 @@ export default function LKN() {
             </div>
           </aside>
           <main className="main-content">
-            <h1>Идите нахуй бляди :/</h1>
           </main>
         </div>
       </div>
