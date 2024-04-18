@@ -1,5 +1,6 @@
 // Modal.js
-import React from "react";
+import React from "react"
+import "./Modal.css"
 
 export default function Modal({ active, setActive }) {
   return (

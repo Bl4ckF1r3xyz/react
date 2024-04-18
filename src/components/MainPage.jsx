@@ -7,7 +7,6 @@ import { useState } from "react"
 import Modal from "./Modal"
 import ModalKontact from "./ModalKontact"
 import "./Modal.css"
-import "./ModalKontact.css"
 import "./mainPage.css"
 
 function MainPage(){
