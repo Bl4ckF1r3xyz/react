@@ -6,6 +6,8 @@ button {
     transition: all 0.3s;
     font-weight: bold;
     margin-right: 1rem;
+    background-color: #F6B91C;
+    color:white;
 }
 button:hover {
     opacity: 0.8;
