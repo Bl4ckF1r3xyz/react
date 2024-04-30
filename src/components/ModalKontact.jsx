@@ -1,5 +1,5 @@
-// Modal.js
 import React from "react";
+import "./ModalKontact.css"
 
 export default function ModalKontact({ active, setActive }) {
   return (
@@ -8,14 +8,11 @@ export default function ModalKontact({ active, setActive }) {
         <div className="modal__content">
         <h2>Здесь вы можете связаться с нами.</h2>
         <input className="one" type="text" placeholder="Фио?" />
-        <br />
         <input className="two" type="text" placeholder="Номер?" />
-        <br />
         <input className="three" type="text" placeholder="E-mail" />
-        <br />
-        <input className="four" type="text" placeholder="Цель обращения" />
-
-                <button className="Zak" onClick={() => setActive(false)}>Отправить</button>
+        <textarea className="four" contenteditable="true" type="text" placeholder="Цель обращения" /> 
+        
+        <button className="Otp" onClick={() => setActive(false)}>Отправить</button>
         </div>
       </div>
     </div>

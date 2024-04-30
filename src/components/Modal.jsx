@@ -34,7 +34,6 @@ export default function Modal({ active, setActive }) {
         <label for="contactChoice1">Нужна спец. техника</label>
         <br />
                 <button className="Ras">Рассчитать</button>
-                <button className="Zak" onClick={() => setActive(false)}>Закрыть</button>
         </div>
       </div>
     </div>
