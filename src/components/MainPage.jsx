@@ -4,9 +4,9 @@ import DataSection from './DataSection'
 import UslugiSection from './UslugiSection'
 import TarifSection from './TarifSection'
 import { useState } from "react"
-import Modal from "./Modal"
+import Modal from "./Calc"
 import ModalKontact from "./ModalKontact"
-import "./Modal.css"
+import "./Calc.css"
 import "./mainPage.css"
 
 function MainPage(){
@@ -20,11 +20,11 @@ function MainPage(){
       <GlavName />
       <DataSection />
       <UslugiSection />
-      <img src="15.png" />
+      <img className="oz" src="15.png" />
       <p>Перевозки отдельной машиной</p>
-      <img src="14.png"/>
+      <img className="ob" src="14.png"/>
       <p>Перевозки сборных грузов</p> 
-      <img src="13.png"/> 
+      <img className="ob"src="13.png"/> 
       <p>Перевозки негабаритных грузов</p>
       <img src="11.png"/> 
       <p>Перевозки опасных грузов</p>

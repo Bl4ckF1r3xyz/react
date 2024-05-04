@@ -1,13 +1,15 @@
-import React from "react"
-import "./Modal.css"
+import Header from "./Header"
+import "./Card.css"
 
-export default function Modal({ active, setActive }) {
-  return (
-    <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-      <div className="modal_content" onClick={e => e.stopPropagation()}>
-        <div className="modal__content">
-        <h2>Рассчитайте стоимость перевозки за 1 минуту</h2>
-        <input className="one" type="text" placeholder="Откуда?" />
+
+function MainPage(){
+
+    return(  
+        <>
+           <div>
+      <Header />
+    <main>
+    <input className="one" type="text" placeholder="Откуда?" />
         <br />
         <input className="two" type="text" placeholder="Куда?" />
         <br />
@@ -34,8 +36,10 @@ export default function Modal({ active, setActive }) {
         <label for="contactChoice1">Нужна спец. техника</label>
         <br />
                 <button className="Ras">Рассчитать</button>
-        </div>
+        </main>
       </div>
-    </div>
-  );
+        </>
+    )
 }
+
+export default MainPage

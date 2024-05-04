@@ -9,6 +9,7 @@ import MainPage from "./components/MainPage"
 import { Route,Routes } from "react-router-dom"
 import LKDop from "./LKDop"
 import LKN from "./LKN"
+import Card from "./components/Card"
 
 
 
@@ -21,6 +22,7 @@ export default  function App(){
       <Route path="/main" element={<MainPage />}></Route>
       <Route path="/LKDop" element={<LKDop />}></Route>
       <Route path="/LKN" element={<LKN />}></Route>
+      <Route path="/Card" element={<Card />}></Route>
       </Routes>
   )
 }
