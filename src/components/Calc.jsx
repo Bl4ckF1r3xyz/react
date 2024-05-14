@@ -1,7 +1,7 @@
 import React from "react"
 import "./Calc.css"
 
-export default function Modal({ active, setActive }) {
+export default function Modal({ active, setActive,maxWeight }) {
   return (
     <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
       <div className="modal_content" onClick={e => e.stopPropagation()}>
@@ -11,7 +11,7 @@ export default function Modal({ active, setActive }) {
         <br />
         <input className="two" type="text" placeholder="Куда?" />
         <br />
-        <input className="three" type="text" placeholder="Укажите примерный вес груза (в кг):" />
+        <input className="three" type="text"  placeholder="Укажите примерный вес груза (в кг):" />
         <br />
         <p>Выберите тип груза:</p>
         <br />

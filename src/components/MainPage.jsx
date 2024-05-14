@@ -3,14 +3,29 @@ import GlavName from './GlavName'
 import DataSection from './DataSection'
 import UslugiSection from './UslugiSection'
 import TarifSection from './TarifSection'
-import { useState } from "react"
+import {useEffect, useState} from "react"
 import Modal from "./Calc"
 import ModalKontact from "./ModalKontact"
+import axios from "axios";
 import "./Calc.css"
 import "./mainPage.css"
+import {api} from "../utils/api.js";
 
 function MainPage(){
+  const [tariff, setTariff] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
 
+  useEffect(() => {
+    axios.get(api+'/api/tariff',  )
+        .then(response => {
+          setTariff(response.data.tariff);
+          setLoading(false);
+
+        })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+  }, []);
     return(  
         <>
            <div>
@@ -36,21 +51,13 @@ function MainPage(){
       
        
       <h3 className="centered">Наши тарифы</h3>
-      
-      <img src="1.png"/>
-      <p>ЕВРОФУРЫ 20 ТОНН От 30 руб/км</p><TarifSection />
-      <img src="2.png"/> 
-      <p>ДЛЯ ОПАСНЫХ ГРУЗОВ 20 ТОНН От 40 руб/км</p><TarifSection />
-      <img src="3.png"/> 
-      <p>ДЛЯ ОПАСНЫХ НЕГАБАРИТНЫХ ГРУЗОВ 20 ТОНН От 65 руб/км</p><TarifSection />
-      <img src="4.png"/> 
-      <p>ГАЗЕЛИ 2 ТОННЫ От 9 руб/км</p><TarifSection /> 
-      <img src="5.png"/>
-      <p>ПЯТИТОННИКИ 5 ТОНН От 16 руб/км</p><TarifSection /> 
-      <img src="6.png"/>
-      <p>ДЕСЯТИТОННИКИ 10 ТОНН От 27 руб/км</p><TarifSection /> 
-      <img src="7.png"/>
-      <p>ПЯТИТОННИКИ 5 ТОНН От 16 руб/км</p><TarifSection /> 
+      {tariff.map(tariff => (
+
+<div key={tariff.id}>
+      <img width='100px' height='100px' src={`data:image/png;base64,${tariff.icon}`}/>
+      <p>{tariff.name}</p><TarifSection maxWeight={tariff.max_weight} />
+</div>
+        ))}
         </main>
       </div>
         </>
