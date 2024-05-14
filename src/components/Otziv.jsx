@@ -2,13 +2,13 @@ import Header from "./Header";
 import './Otziv.css'
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import {api} from "../utils/api"
 export default function LK() {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true); // Add loading state
 
     useEffect(() => {
-        axios.get('https://226a64ab-15e7-4ad5-97b1-fde455fd41ec-00-2ee8zvawkqwj9.sisko.replit.dev/api/feedback',  )
+        axios.get(api+'/api/feedback',  )
             .then(response => {
                 setReviews(response.data.feedbacks);
                 setLoading(false);
