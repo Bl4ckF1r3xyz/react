@@ -12,7 +12,7 @@ export default function Header() {
     <header>
       <Link to="/">Харон <h3>транспортная фирма</h3></Link>
       <h2 onClick={() => setModalActive(true)}>Калькулятор</h2>
-      <Link to="/Otziv">Отзыв</Link>
+      <Link to="/Otziv">Отзывы</Link>
       <h2 onClick={() => setKontactActive(true)}>Связаться с нами</h2>
       <Link to="/lk">Личный кабинет</Link>
       <Modal active={modalActive} setActive={setModalActive} />
