@@ -1,3 +1,67 @@
 .Ras{
     margin-top: 2%;
-    }
+}
+#content {
+    float: right;
+    width: 80%;
+    height: 280px;
+}
+.zero{
+    width: 50%;
+}
+.zero-two{
+    width: 50%;
+}
+.zero-three{
+    width: 50%;
+}
+.truck-info-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.truck-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.truck-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.truck-details {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.order-button {
+    background-color: #F6B91C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.order-button:hover {
+    background-color: #F6B91C;
+}
