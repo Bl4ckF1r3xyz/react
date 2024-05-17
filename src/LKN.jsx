@@ -31,6 +31,36 @@ export default function LKN() {
               <div className="menu-item active">Настройки</div>
             </div>
           </aside>
+          <div className="card">
+                <img src="your-image-url.jpg" alt="" className="image" />
+                <div className="details">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Фио</td>
+                                <td>Ебло Утиное</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>Chandon@eblan.com</td>
+                            </tr>
+                            <tr>
+                                <td>Номер телефона</td>
+                                <td>79524332122</td>
+                            </tr>
+                            <tr>
+                                <td>Представитель компании</td>
+                                <td>Anti debics debix club</td>
+                            </tr>
+                            <tr>
+                                <td>Пароль</td>
+                                <td>*****</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button className="order-button">Изменить</button>
+                </div>
+            </div>
           <main className="main-content">
           </main>
         </div>
