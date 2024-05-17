@@ -1,0 +1,26 @@
+ .modal__content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    height: 300px;
+    width: 400px;
+  }
+  
+  .modal.active{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+.one{
+width: 100%;
+}
+.two{
+    width: 100%;
+}
+.three{
+    width: 100%;
+}
+.Aut{
+  margin-top: 20%;
+  }
