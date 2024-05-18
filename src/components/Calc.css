@@ -11,7 +11,7 @@
     transform: scale(0);
   }
   
-  .modal__content {
+  .modal__content_one {
     padding: 20px;
     border-radius: 12px;
     background-color: white;

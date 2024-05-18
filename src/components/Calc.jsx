@@ -5,7 +5,7 @@ export default function Modal({ active, setActive,maxWeight }) {
   return (
     <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
       <div className="modal_content" onClick={e => e.stopPropagation()}>
-        <div className="modal__content">
+        <div className="modal__content_one">
         <h2>Рассчитайте стоимость перевозки за 1 минуту</h2>
         <input className="one" type="text" placeholder="Откуда?" />
         <br />

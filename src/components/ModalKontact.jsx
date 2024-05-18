@@ -38,7 +38,7 @@ export default function ModalKontact({ active, setActive }) {
   return (
       <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
         <div className="modal_content" onClick={(e) => e.stopPropagation()}>
-          <div className="modal__content">
+          <div className="modal__content_two">
             <h2>Здесь вы можете связаться с нами.</h2>
             <input
                 className="one"

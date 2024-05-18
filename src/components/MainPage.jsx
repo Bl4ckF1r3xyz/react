@@ -14,7 +14,13 @@ import {api} from "../utils/api.js";
 function MainPage(){
   const [tariff, setTariff] = useState([]);
   const [loading, setLoading] = useState(true); // Add loading state
-
+  const services = [
+    { id: 1, img: '15.png', text: 'Перевозки отдельной машиной' },
+    { id: 2, img: '14.png', text: 'Перевозки сборных грузов' },
+    { id: 3, img: '13.png', text: 'Перевозки негабаритных грузов' },
+    { id: 4, img: '12.png', text: 'Перевозки опасных грузов' },
+    { id: 5, img: '11.png', text: 'Перевозки в труднодоступные места' },
+  ];
   useEffect(() => {
     axios.get(api+'/api/tariff',  )
         .then(response => {
@@ -35,30 +41,30 @@ function MainPage(){
       <GlavName />
       <DataSection />
       <UslugiSection />
-      <img className="oz" src="15.png" />
-      <p>Перевозки отдельной машиной</p>
-      <img className="ob" src="14.png"/>
-      <p>Перевозки сборных грузов</p> 
-      <img className="ob"src="13.png"/> 
-      <p>Перевозки негабаритных грузов</p>
-      <img src="11.png"/> 
-      <p>Перевозки опасных грузов</p>
-      <img src="12.png"/>
-      <p>Перевозки в труднодоступные места</p>
-
+      <div className="services">
+          {services.map(service => (
+            <div key={service.id} className="service">
+              <img src={service.img}/>
+              <span className="service-text">{service.text}</span>
+            </div>
+          ))}
+        </div>
 
 
       
        
       <h3 className="centered">Наши тарифы</h3>
+      <div className="services">
       {tariff.map(tariff => (
 
-<div key={tariff.id}>
-      <img width='100px' height='100px' src={`data:image/png;base64,${tariff.icon}`}/>
-      <p>{tariff.name}</p><TarifSection maxWeight={tariff.max_weight} />
+<div key={tariff.id}  className="service">
+      <img src={`data:image/png;base64,${tariff.icon}`}/>
+      <p className="service-text">{tariff.name}</p><TarifSection maxWeight={tariff.max_weight} />
 </div>
         ))}
+</div>
         </main>
+        
       </div>
         </>
     )
