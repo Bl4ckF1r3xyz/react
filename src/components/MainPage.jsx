@@ -1,7 +1,5 @@
 import Header from "./Header"
-import GlavName from './GlavName'
 import DataSection from './DataSection'
-import UslugiSection from './UslugiSection'
 import TarifSection from './TarifSection'
 import {useEffect, useState} from "react"
 import Modal from "./Calc"
@@ -38,9 +36,12 @@ function MainPage(){
       <Header />
     <main>
     <div className="background" />
-      <GlavName />
+    <h1 className="er">Грузоперевозки <b>по России</b> от 100кг или 1 М3</h1>
       <DataSection />
-      <UslugiSection />
+      <h1 className="centered">Наши <b>услуги</b></h1>
+          <h4 className="centered">
+          Автомобильные грузоперевозки по всей России в том числе и в труднодоступные районы
+          </h4>
       <div className="services">
           {services.map(service => (
             <div key={service.id} className="service">
@@ -53,7 +54,7 @@ function MainPage(){
 
       
        
-      <h3 className="centered">Наши тарифы</h3>
+      <h1 className="centered">Наши<b> тарифы </b></h1>
       <div className="services">
       {tariff.map(tariff => (
 

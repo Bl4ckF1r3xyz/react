@@ -3,8 +3,6 @@ body {
 }
 .oz{
 padding-left: 40px;
-
-
 }
 
 .ob{
@@ -78,4 +76,10 @@ body, html, #root {
 
 .service-text {
   font-size: 1em;
+}
+.er{
+text-align: center;
+}
+b{
+  color: #F6B91C;
 }
