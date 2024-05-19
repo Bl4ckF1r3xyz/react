@@ -9,15 +9,15 @@ export default function Modal({ active, setActive,maxWeight }) {
         <h3>Регистрация</h3>
         <input className="one" type="text" placeholder="Фио" />
         <br />
-        <input className="two" type="text" placeholder="Email" />
+        <input className="one" type="text" placeholder="Email" />
         <br />
-        <input className="two" type="text" placeholder="Номер телефона" />
+        <input className="one" type="text" placeholder="Номер телефона" />
         <br />
-        <input className="two" type="text" placeholder="Представителем какой компании вы являетесь" />
+        <input className="one" type="text" placeholder="Представителем какой компании вы являетесь" />
         <br />
-        <input className="two" type="text" placeholder="Пароль" />
+        <input className="one" type="text" placeholder="Пароль" />
         <br />
-        <input className="two" type="text" placeholder="Пароль еще раз" />
+        <input className="one" type="text" placeholder="Пароль еще раз" />
         <br />
                 <button className="Auto">Зарегистрироваться</button>
         </div>

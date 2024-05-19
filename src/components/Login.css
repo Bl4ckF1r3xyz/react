@@ -2,7 +2,7 @@
     padding: 20px;
     border-radius: 12px;
     background-color: white;
-    height: 300px;
+    height: 250px;
     width: 400px;
   }
   
@@ -22,5 +22,8 @@ width: 100%;
     width: 100%;
 }
 .Aut{
-  margin-top: 20%;
+  margin-top: 25%;
+  }
+  .Reg{
+    margin-left: 10px;
   }

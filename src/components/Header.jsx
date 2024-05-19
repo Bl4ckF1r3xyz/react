@@ -28,7 +28,7 @@ export default function Header() {
         <header>
             <div className="logo">
                 <Link to="/">
-                    Харон <h3>транспортная фирма</h3>
+                    <b>Харон</b><h5>транспортная фирма</h5>
                 </Link>
             </div>
 
