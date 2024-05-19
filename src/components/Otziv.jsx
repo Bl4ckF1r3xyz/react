@@ -3,6 +3,8 @@ import './Otziv.css'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {api} from "../utils/api"
+import bgimage from "../assets/image 1.png";
+import {Parallax} from "react-parallax";
 export default function LK() {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true); // Add loading state
@@ -21,9 +23,10 @@ export default function LK() {
 
 
 
-    return (
+    return (<Parallax bgImage={bgimage} strength={500}  bgImageStyle={{ height: '100vh', maxWidth: '100vw' }} >
         <div className="LK">
             <Header />
+
             <main>
                 <h1 className="centered">Отзывы о грузоперевозчиках</h1>
                 {loading ? (
@@ -32,7 +35,7 @@ export default function LK() {
                     <div className="otziv-container">
                         {reviews.map((review, index) => (
                             <div key={index} className="review">
-                                <p >{review.user_id}</p>
+                                <p >{review.username}</p>
                                 <p>{review.message}</p>
                             </div>
                         ))}
@@ -41,6 +44,7 @@ export default function LK() {
                     <div>No reviews available</div>
                 )}
             </main>
-        </div>
+
+        </div> </Parallax>
     );
 }

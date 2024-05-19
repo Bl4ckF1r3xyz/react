@@ -8,6 +8,8 @@ import axios from "axios";
 import "./Calc.css"
 import "./mainPage.css"
 import {api} from "../utils/api.js";
+import {Parallax} from "react-parallax";
+import bgimage from '../assets/image 1.png'
 
 function MainPage(){
   const [tariff, setTariff] = useState([]);
@@ -32,8 +34,10 @@ function MainPage(){
   }, []);
     return(  
         <>
+
            <div>
       <Header />
+               <Parallax bgImage={bgimage} strength={500} blur={100} bgImageStyle={{ height: '100%', maxWidth: '100vw' }} >
     <main>
     <div className="background" />
     <h1 className="er">Грузоперевозки <b>по России</b> от 100кг или 1 М3</h1>
@@ -65,7 +69,7 @@ function MainPage(){
         ))}
 </div>
         </main>
-        
+               </Parallax>
       </div>
         </>
     )

@@ -29,7 +29,7 @@ export default function Modal({ active, setActive }) {
                 setToken(token);
                 localStorage.setItem('token', token);
 
-                // Verify the token
+                // Verify th token
                 return axios.get(`${api}/api/verify`, {
                     params: {
                         token: token

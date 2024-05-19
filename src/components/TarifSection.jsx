@@ -16,7 +16,7 @@ export default function Section(maxWeight) {
 
   return (
       <section className="centred" >
-      <button onClick={() => setModalActive(true)}>Быстрый расчет</button>
+      <button  onClick={() => setModalActive(true)}>Быстрый расчет</button>
       <br />
       <Link to="/Card"><button >Подробный расчет</button></Link>
       <Modal active={modalActive} maxWeight={maxWeight.maxWeight}  setActive={setModalActive} />

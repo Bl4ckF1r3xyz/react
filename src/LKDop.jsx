@@ -2,6 +2,9 @@ import React from 'react';
 import Header from "./components/Header";
 import './LK.css';
 import { Link } from "react-router-dom";
+import Divider from "./components/Divider.jsx";
+import bgimage from "./assets/image 1.png";
+import {Parallax} from "react-parallax";
 
 export default function LKDop() {
   const userInfo = {
@@ -17,42 +20,27 @@ export default function LKDop() {
 
 
   return (
-    <><Header /><div className="lk-container-glav">
+      <><Header /> <Parallax bgImage={bgimage} strength={500} bgImageStyle={{height: '100%', maxWidth: '100vw'}}>
+        <div className="lk-container">
+          <Divider/>
 
-      <div className="lk-container">
-        <div className="lk-content">
-          <aside className="sidebar">
-            <div className="user-profile">
-              <div className="user-initials">{userInfo.initials}</div>
-              <div className="user-details">
-                <div className="user-name">{userInfo.name}</div>
-                <div className="user-company">{userInfo.company}</div>
-                <div className="user-phone">{userInfo.phone}</div>
-              </div>
-            </div>
-            <div className="menu">
-              <div className="menu-item"> <Link to="/LK">История перевозок</Link></div>
-              <div className="menu-item active">Ближайшие перевозки</div>
-              <div className="menu-item"><Link to="/LKN">Настройки</Link></div>
-            </div>
-          </aside>
           <main className="main-content">
             <div className="date-filter">
-              <p>Период от</p><input type="date" />
-              <p>До</p><input type="date" />
+              <p>Период от</p><input type="date"/>
+              <p>До</p><input type="date"/>
             </div>
             <div className="orders">
               {orders.map(order => (
-                <div className="order-item" key={order.id}>
-                  <span className="order-id">Заказ {order.id}</span>
-                  <span className="order-date">{order.date}</span>
-                  <span className={`order-status ${order.status.toLowerCase()}`}>{order.status}</span>
-                </div>
+                  <div className="order-item" key={order.id}>
+                    <span className="order-id">Заказ {order.id}</span>
+                    <span className="order-date">{order.date}</span>
+                    <span className={`order-status ${order.status.toLowerCase()}`}>{order.status}</span>
+                  </div>
               ))}
             </div>
           </main>
         </div>
-      </div>
-    </div></>
-  );
+      </Parallax>
+      </>
+);
 }

@@ -1,22 +1,28 @@
 .lk-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
   }
   
 .lk-content {
     display: flex;
+    background-color: #F6B91C;
     align-items: center;
     justify-content: center;
+    width: 20%;
+    height: auto;
+    margin-left: 100px;
   }
 
 .sidebar {
     background-color: #F6B91C;
     padding: 20px;
     width: 300px;
-    height: 100vmin
+    height: 100vmin;
 }
 .user-profile {
     display: flex;
