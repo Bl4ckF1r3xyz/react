@@ -1,1 +1,1 @@
-export const api = 'https://culcat-diplom-3fe6.twc1.net/'
+export const api = 'https://culcat-diplom-3fe6.twc1.net'
