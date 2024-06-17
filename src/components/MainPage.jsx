@@ -47,25 +47,6 @@ function MainPage() {
 
     return (
         <>
-<<<<<<< HEAD
-
-           <div>
-      <Header />
-               <Parallax bgImage={bgimage} strength={500} blur={10} bgImageStyle={{ height: '100%', maxWidth: '100vw' }} >
-    <main>
-    <div className="background" />
-    <h1 className="er">Грузоперевозки <b>по России</b> от 100кг или 1 М3</h1>
-      <DataSection />
-      <h1 className="centered">Наши <b>услуги</b></h1>
-          <h4 className="centered">
-          Автомобильные грузоперевозки по всей России в том числе и в труднодоступные районы
-          </h4>
-      <div className="services">
-          {services.map(service => (
-            <div key={service.id} className="service">
-              <img src={service.img}/>
-              <span className="service-text">{service.text}</span>
-=======
             <div>
                 <Header />
                 <Parallax bgImage={bgimage} strength={500} blur={0} bgImageStyle={{ height: '100%', maxWidth: '100vw' }}>
@@ -97,7 +78,6 @@ function MainPage() {
                         </div>
                     </main>
                 </Parallax>
->>>>>>> c971b61b446efdeec184cc62d42aff33db4cd94a
             </div>
         </>
     );
