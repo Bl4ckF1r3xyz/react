@@ -11,6 +11,7 @@ export default function Header() {
     const [loginActive, setLoginActive] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+
     function handleLogout() {
         localStorage.removeItem('user');
         window.location.href = '/';
@@ -32,18 +33,24 @@ export default function Header() {
                 </Link>
             </div>
 
-
+            <div className={`burger-menu ${menuActive ? 'active' : ''}`} onClick={() => setMenuActive(!menuActive)}>
+                <div className="line1"></div>
+                <div className="line2"></div>
+                <div className="line3"></div>
+            </div>
+            <nav className={`nav-links ${menuActive ? 'active' : ''}`}>
                 <h2 onClick={() => setModalActive(true)}>Калькулятор</h2>
                 <Link to="/Otziv">Отзывы</Link>
                 <h2 onClick={() => setKontactActive(true)}>Связаться с нами</h2>
                 {isAuthenticated ? (
                     <>
-                    <Link to="/lk">Личный кабинет</Link>
-                    <h2 onClick={handleLogout}>Выход</h2></>
+                        <Link to="/lk">Личный кабинет</Link>
+                        <h2 onClick={handleLogout}>Выход</h2>
+                    </>
                 ) : (
                     <h2 onClick={() => setLoginActive(true)}>Авторизация</h2>
                 )}
-
+            </nav>
             <Modal active={modalActive} setActive={setModalActive} />
             <ModalKontact active={kontactActive} setActive={setKontactActive} />
             <Login active={loginActive} setActive={setLoginActive} />

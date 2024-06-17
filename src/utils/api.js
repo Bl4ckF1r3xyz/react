@@ -1,1 +1,1 @@
-export const api = 'https://fbe75c83-ee1a-4d2d-94d4-698ef548c414-00-29d646ssr1323.sisko.replit.dev'
+export const api = 'https://culcat-diplom-3fe6.twc1.net'
