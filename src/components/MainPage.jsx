@@ -37,7 +37,7 @@ function MainPage(){
 
            <div>
       <Header />
-               <Parallax bgImage={bgimage} strength={500} blur={0} bgImageStyle={{ height: '100%', maxWidth: '100vw' }} >
+               <Parallax bgImage={bgimage} strength={500} blur={10} bgImageStyle={{ height: '100%', maxWidth: '100vw' }} >
     <main>
     <div className="background" />
     <h1 className="er">Грузоперевозки <b>по России</b> от 100кг или 1 М3</h1>
