@@ -1,92 +1,101 @@
-import Header from "./Header"
-import "./Card.css"
-import React from 'react';
+import React, { useState } from 'react';
+import Header from "./Header";
+import "./Card.css";
+import {api} from "../utils/api.js";
 
 
+function MainPage() {
+    const [selectedType, setSelectedType] = useState(''); // State to store the selected radio button value
+    const [responseData, setResponseData] = useState(null);
+    const handleCalculate = () => {
+        fetch(`${api}/api/trucks?type=${selectedType}`)
+            .then(response => response.json())
+            .then(data => {
+                setResponseData(data)
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    };
 
-function MainPage(){
+    const handleRadioChange = (e) => {
+        setSelectedType(e.target.value);
+    }
 
-    return(  
+    return (
         <>
-           <div>
-      <Header />
-    <main>
-    <div id="content">
-    <input className="zero" type="text" placeholder="Откуда?" />
-        <br />
-        <input className="zero-two" type="text" placeholder="Куда?" />
-        <br />
-        <input className="zero-three" type="text" placeholder="Укажите примерный вес груза (в кг):" />
-        <br />
-        <p>Выберите тип груза:</p>
-        <br />
-        <input type="radio" id="contactChoice1" name="contact" value="email" />
-        <label for="contactChoice1">Отдельной машиной</label>
-        <br />
-        <input type="radio" id="contactChoice1" name="contact" value="email" />
-        <label for="contactChoice1">Негабаритный</label>
-        <br />
-        <input type="radio" id="contactChoice1" name="contact" value="email" />
-        <label for="contactChoice1">Опасный</label>
-        <br />
-            <input type="checkbox" value="email" />
-        <label for="contactChoice1">Нужны грузчики на погрузку</label>
-        <br />
-            <input type="checkbox" value="email" />
-        <label for="contactChoice1">Нужны грузчики на разгрузку</label>
-        <br />
-            <input type="checkbox" value="email" />
-        <label for="contactChoice1">Нужна спец. техника</label>
-        <br />
-                <button className="Ras">Рассчитать</button> 
-        
-        <div className="truck-info-container">
-            <h1>Вот такие грузовики мы вам подобрали</h1>
-            <div className="truck-card">
-                <img src="your-image-url.jpg" alt="Грузовик" className="truck-image" />
-                <div className="truck-details">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Грузоподъемность</td>
-                                <td>20 т.</td>
-                            </tr>
-                            <tr>
-                                <td>Длина кузова</td>
-                                <td>13.6 м.</td>
-                            </tr>
-                            <tr>
-                                <td>Высота кузова</td>
-                                <td>2.65 м.</td>
-                            </tr>
-                            <tr>
-                                <td>Объём кузова</td>
-                                <td>82 м/куб</td>
-                            </tr>
-                            <tr>
-                                <td>Вид кузова</td>
-                                <td>фура</td>
-                            </tr>
-                            <tr>
-                                <td>Марка грузовика</td>
-                                <td>DONGFENG</td>
-                            </tr>
-                            <tr>
-                                <td>Опыт работы</td>
-                                <td>1 год</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <button className="order-button">Заказать</button>
-                </div>
-            </div>
-        </div>
+            <div>
+                <Header />
+                <main>
+                    <div id="content">
+                        <input className="zero" type="text" placeholder="Откуда?"/>
+                        <br/>
+                        <input className="zero-two" type="text" placeholder="Куда?"/>
+                        <br/>
+                        <input className="zero-three" type="text" placeholder="Укажите примерный вес груза (в кг):"/>
+                        <br/>
+                        <p>Выберите тип груза:</p>
+                        <br/>
+                        <input type="radio" id="contactChoice1" name="contact" value="1" onChange={handleRadioChange}/>
+                        <label htmlFor="contactChoice1">Отдельной машиной</label>
+                        <br/>
+                        <input type="radio" id="contactChoice2" name="contact" value="2" onChange={handleRadioChange}/>
+                        <label htmlFor="contactChoice2">Негабаритный</label>
+                        <br/>
+                        <input type="radio" id="contactChoice3" name="contact" value="3" onChange={handleRadioChange}/>
+                        <label htmlFor="contactChoice3">Опасный</label>
+                        <br/>
+                        <button className="Ras" onClick={handleCalculate}>Рассчитать</button>
+                    </div>
+                    <div className="truck-info-container">
+                        <h1>Вот такие грузовики мы вам подобрали</h1>
+                        {responseData && responseData.trucks && responseData.trucks.map((truck) => (
+                            <div className="truck-card">
+                            <img src={truck.img} alt="Грузовик" className="truck-image"/>
+                            <div className="truck-details">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <td>Грузоподъемность</td>
+                                        <td>{truck.load_capacity}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Длина кузова</td>
+                                        <td>{truck.length} м.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Высота кузова</td>
+                                        <td>{truck.height} м.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Объём кузова</td>
+                                        <td>{truck.volume} м/куб</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вид кузова</td>
+                                        <td>фура</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Марка грузовика</td>
+                                        <td>{truck.Brand}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Опыт работы</td>
+                                        <td>{truck.experience} год</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <button className="order-button">Заказать</button>
+                            </div>
+                        </div>
+                        ))}
 
-        </div>     
-        </main>
-      </div>
+                    </div>
+                </main>
+            </div>
         </>
     )
 }
 
-export default MainPage
+export default MainPage;
