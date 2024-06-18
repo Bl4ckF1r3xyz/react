@@ -3,7 +3,7 @@ import './Otziv.css'
 import { useEffect, useState } from "react";
 import axios from "axios";
 import {api} from "../utils/api"
-import bgimage from "../assets/image 1.png";
+import bgimage from "../assets/image 1.jpeg";
 import {Parallax} from "react-parallax";
 export default function LK() {
     const [reviews, setReviews] = useState([]);

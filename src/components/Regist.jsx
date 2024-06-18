@@ -18,6 +18,8 @@ export default function Modal({ active, setActive,maxWeight }) {
         <input className="one" type="text" placeholder="Пароль" />
         <br />
         <input className="one" type="text" placeholder="Пароль еще раз" />
+        <input type="checkbox" value="email" />
+        <label className="icq" for="contactChoice5">Ставя галочку, вы подтверждаете, что ознакомились с условиями обратботки персональных данных и принимаете их.</label>
         <br />
                 <button className="Auto">Зарегистрироваться</button>
         </div>

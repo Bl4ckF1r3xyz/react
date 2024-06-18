@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import './LK.css';
 import { Link } from "react-router-dom";
 import Divider from "./components/Divider.jsx";
-import bgimage from "./assets/image 1.png";
+import bgimage from "./assets/image 1.jpeg";
 import {Parallax} from "react-parallax";
 
 export default function LKN() {

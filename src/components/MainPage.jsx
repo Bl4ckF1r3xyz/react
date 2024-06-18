@@ -9,7 +9,7 @@ import "./Calc.css";
 import "./mainPage.css";
 import {api} from "../utils/api.js";
 import {Parallax} from "react-parallax";
-import bgimage from '../assets/image 1.png';
+import bgimage from '../assets/image 1.jpeg';
 
 function MainPage() {
     const [tariff, setTariff] = useState([]);
