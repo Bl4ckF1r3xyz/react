@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from "./components/Header";
 import './LK.css';
 import { Link } from "react-router-dom";
-import bgimage from "./assets/image 1.png";
+import bgimage from "./assets/image 1.jpeg";
 import {Parallax} from "react-parallax";
 import Divider from "./components/Divider.jsx";
 export default function LK() {

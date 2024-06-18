@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Header from "./Header";
 import "./Card.css";
 import {api} from "../utils/api.js";
-
+import Order from "./Card_pop.jsx";
 
 function MainPage() {
+    const [orderActive, setOrderActive] = useState(false)
     const [selectedType, setSelectedType] = useState(''); // State to store the selected radio button value
     const [responseData, setResponseData] = useState(null);
     const handleCalculate = () => {
@@ -86,11 +87,11 @@ function MainPage() {
                                     </tr>
                                     </tbody>
                                 </table>
-                                <button className="order-button">Заказать</button>
+                                <button onClick={() => setOrderActive(true)}>Заказать</button>
                             </div>
                         </div>
                         ))}
-
+                        <Order active={orderActive} setActive={setOrderActive} />
                     </div>
                 </main>
             </div>
