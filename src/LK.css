@@ -22,7 +22,7 @@
     background-color: #F6B91C;
     padding: 20px;
     width: 300px;
-    height: 100vmin;
+    height: 100vh;
 }
 .user-profile {
     display: flex;
@@ -77,14 +77,15 @@
     padding: 20px;
     border-radius: 10px;
     width: 700px;
+    margin-bottom: 20px;
+
 }
   
 .order-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
-    
+
 }
 
 .order-status {
