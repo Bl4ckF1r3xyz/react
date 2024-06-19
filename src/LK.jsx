@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Header from "./components/Header";
 import './LK.css';
 import { Link } from "react-router-dom";
-import bgimage from "./assets/image 1.png";
-import { Parallax } from "react-parallax";
 import Divider from "./components/Divider.jsx";
 import axios from 'axios';
 
@@ -41,7 +39,6 @@ export default function LK() {
     return (
         <>
             <Header />
-            <Parallax bgImage={bgimage} strength={500} bgImageStyle={{ height: '100%', maxWidth: '100vw' }}>
                 <div className="lk-container">
                     <Divider />
                     <main className="main-content">
@@ -67,7 +64,6 @@ export default function LK() {
                         </div>   ))}
                     </main>
                 </div>
-            </Parallax>
         </>
     );
 }

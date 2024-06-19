@@ -1,7 +1,6 @@
 import "./Login.css";
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Reg from "./Regist";
 import axios from "axios";
 import { api } from "../utils/api.js";
 
@@ -47,8 +46,8 @@ export default function Modal({ active, setActive }) {
 
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
-            <div className="modal_content" onClick={e => e.stopPropagation()}>
-                <div className="modal__content">
+            <div className="modal_content4" onClick={e => e.stopPropagation()}>
+                <div className="modal__content4">
                     <h2>Личный кабинет</h2>
                     <h3>Авторизация</h3>
                     <input
@@ -70,8 +69,6 @@ export default function Modal({ active, setActive }) {
                     />
                     <br />
                     <button className="Aut" onClick={handleLogin}>Авторизация</button>
-                    <button onClick={() => setRegActive(true)} className="Reg">Регистрация</button>
-                    <Reg active={regActive} setActive={setRegActive} />
                 </div>
             </div>
         </div>

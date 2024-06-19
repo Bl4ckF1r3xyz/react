@@ -1,5 +1,12 @@
+.modal__content{
+  padding: 0 20px;
+  border-radius: 12px;
+  background-color: white;
+  height: 300px;
+  width: 400px;
+}
 .Auto{
-  margin-top: 16%;
+  margin-top: 3%;
   width: 130px;
   }
   .icq{

@@ -3,14 +3,13 @@ import Header from "./components/Header";
 import './LK.css';
 import { Link } from "react-router-dom";
 import Divider from "./components/Divider.jsx";
-import bgimage from "./assets/image 1.jpeg";
-import {Parallax} from "react-parallax";
+
 
 export default function LKN() {
 
 
   return (
-      <><Header />    <Parallax bgImage={bgimage} strength={500} bgImageStyle={{height: '100%', maxWidth: '100vw'}}>
+      <><Header />    
         <div className="lk-container">
         <Divider/>
 
@@ -21,11 +20,11 @@ export default function LKN() {
                         <tbody>
                             <tr>
                                 <td>Фио</td>
-                                <td>Ебло Утиное</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>Email</td>
-                                <td>Chandon@eblan.com</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>Номер телефона</td>
@@ -33,7 +32,7 @@ export default function LKN() {
                             </tr>
                             <tr>
                                 <td>Представитель компании</td>
-                                <td>Anti debics debix club</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>Пароль</td>
@@ -41,12 +40,12 @@ export default function LKN() {
                             </tr>
                         </tbody>
                     </table>
-                    <button className="order-button">Изменить</button>
+                    <button>Изменить</button>
                 </div>
             </div>
           <main className="main-content">
           </main>
 
-    </div></Parallax></>
+    </div></>
   );
 }

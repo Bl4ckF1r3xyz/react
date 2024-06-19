@@ -4,6 +4,7 @@ import Modal from "./Calc";
 import ModalKontact from "./ModalKontact";
 import Login from "./Login";
 import "./Header.css";
+import Reg from "./Regist";
 
 export default function Header() {
     const [modalActive, setModalActive] = useState(false);
@@ -11,6 +12,7 @@ export default function Header() {
     const [loginActive, setLoginActive] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
     const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [regActive, setRegActive] = useState(false)
 
     function handleLogout() {
         localStorage.removeItem('user');
@@ -48,12 +50,13 @@ export default function Header() {
                         <h2 onClick={handleLogout}>Выход</h2>
                     </>
                 ) : (
-                    <h2 onClick={() => setLoginActive(true)}>Авторизация</h2>
+                    <><h2 onClick={() => setLoginActive(true)}>Авторизация</h2><h2 onClick={() => setRegActive(true)}>Регистрация</h2></>
                 )}
             </nav>
             <Modal active={modalActive} setActive={setModalActive} />
             <ModalKontact active={kontactActive} setActive={setKontactActive} />
             <Login active={loginActive} setActive={setLoginActive} />
+            <Reg active={regActive} setActive={setRegActive} />
         </header>
     );
 }
