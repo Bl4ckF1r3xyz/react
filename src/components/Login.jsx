@@ -28,7 +28,7 @@ export default function Modal({ active, setActive }) {
                 setToken(token);
                 localStorage.setItem('token', token);
 
-                // Verify th token
+
                 return axios.get(`${api}/api/verify`, {
                     params: {
                         token: token
@@ -38,6 +38,7 @@ export default function Modal({ active, setActive }) {
             .then(verifyResponse => {
                 localStorage.setItem('user', JSON.stringify(verifyResponse.data.user));
                 setActive(false);
+                window.location.reload()
             })
             .catch(error => {
                 console.error('Error fetching data:', error);

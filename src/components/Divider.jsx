@@ -48,6 +48,9 @@ export default function Divider() {
                             <div className="menu-item">
                                 <Link to="/LKN">Настройки</Link>
                             </div>
+                            <div className="menu-item">
+                                <Link to="/Admin">Админ Панель</Link>
+                            </div>
                         </div>
                     </aside>
                 </div>

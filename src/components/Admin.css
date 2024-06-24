@@ -1,0 +1,22 @@
+.container {
+  text-align: center;
+  margin-top: 150px; 
+}
+.lk-content1{
+    display: flex;
+    background-color: #F6B91C;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: auto;
+    margin-left: 100px;
+}
+.sidebar1{
+    background-color: #F6B91C;
+    padding: 20px;
+    position:fixed;
+    top: 60px;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+}

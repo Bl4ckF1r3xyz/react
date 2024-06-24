@@ -4,8 +4,7 @@ import "../LK.css";
 import { Link } from "react-router-dom";
 import Divider from "./Divider.jsx";
 import axios from 'axios';
-import "./Admin.css";
-import AdminUslug from "./AdminUslug.jsx";
+import "./Admin.css"
 import AdminTarif from "./AdminTarif.jsx"
 
 
@@ -28,7 +27,7 @@ const TrucksAdminPanel = () => {
     <div>
         <Header />
     <div className="container">
-    <h2>Управление грузовиками</h2>
+    <h2>Управление услугами</h2>
     <button onClick={handleAddTruck}>Добавить грузовик</button>
     <ul>
       {trucks.map(truck => (
