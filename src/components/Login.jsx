@@ -20,7 +20,7 @@ export default function Modal({ active, setActive }) {
         axios.get(`${api}/api/login`, {
             params: {
                 phone_number: data.phone,
-                password_hashed: data.password,
+                password: data.password,
             },
         })
             .then(response => {
